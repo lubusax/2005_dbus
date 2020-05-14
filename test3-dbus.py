@@ -1,12 +1,14 @@
 import pydbus
 import json
 import sys
+import logging, logging.config
 
 
 BLUEZ =          'org.bluez'
 DBUS =           'org.freedesktop.DBus.ObjectManager'
 LE_ADVERTISING = 'org.bluez.LEAdvertisingManager1'
 GATT =           'org.bluez.GattManager1'
+
 
 def getBLEinterfaces():
   systemBus = pydbus.SystemBus()
@@ -28,23 +30,30 @@ def getBLEinterfaces():
   
   for path, properties in orgBluezObjects.items():
     if (LE_ADVERTISING in properties) and (GATT in properties):
-      print ('Returning GATT and LE Advertising interfaces on Path ', path)
+      logging.debug(('Returning GATT and BLE-Advertising '+\
+        'interfaces on Path {p}').format(p= path))
       BLEobject = systemBus.get(BLUEZ, path)
       return (  systemBus,
                 BLEobject[GATT],
                 BLEobject[LE_ADVERTISING]  )
-    print('Skip Object with Path :', path)
-  print('No Object Path (Adapter) Found with'+ \
+    logging.debug('Skip Object with Path :', path)
+  logging.error('No Object Path (Adapter) Found with'+ \
     'BLE Advertisement and GATT Interfaces')
-  raise 
+  raise Exception('No BLE Object found with'+ \
+    'BLE Advertisement and GATT Interfaces')
   return None
 
 def main():
 
   systemBus, AttributesInterface, AdvertisingInterface  = getBLEinterfaces()
-  print(AttributesInterface)
+
+  logging.debug('Got GATT Interface:'+\
+    ' {i}'.format(i=AttributesInterface))
+  logging.debug('Got BLE Advertising'+\
+    ' Interface: {i}'.format(i=AdvertisingInterface))
 
 
 if __name__ == '__main__':
-  print('running on python version:', sys.version,"\n"+"-"*70+"\n" )
+  logging.config.fileConfig(fname='./data/logging.conf', disable_existing_loggers=False)
+  logging.debug(('running on python version: {v}').format(v= sys.version))
   main()

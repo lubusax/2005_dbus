@@ -1,0 +1,23 @@
+<DEBUG> <MainProcess(2497)> <14-May-20 22:06:20>     <running on python version: 3.5.3 (default, Sep 27 2018, 17:25:39) 
+[GCC 6.3.0 20170516]>      <root-test3-dbus.py-<module>-line 51>
+<DEBUG> <MainProcess(2664)> <14-May-20 22:10:19>     <running on python version: 3.5.3 (default, Sep 27 2018, 17:25:39) 
+[GCC 6.3.0 20170516]>      <root-test3-dbus.py-<module>-line 52>
+<DEBUG> <MainProcess(2664)> <14-May-20 22:10:19>     <Returning GATT and BLE-Advertising interfaces on Path /org/bluez/hci0>      <root-test3-dbus.py-getBLEinterfaces-line 33>
+<DEBUG> <MainProcess(2971)> <14-May-20 22:14:15>     <running on python version: 3.5.3 (default, Sep 27 2018, 17:25:39) 
+[GCC 6.3.0 20170516]>      <root-test3-dbus.py-<module>-line 52>
+<DEBUG> <MainProcess(2971)> <14-May-20 22:14:15>     <Returning GATT and BLE-Advertising interfaces on Path /org/bluez/hci0>      <root-test3-dbus.py-getBLEinterfaces-line 33>
+<DEBUG> <MainProcess(2990)> <14-May-20 22:14:29>     <running on python version: 3.5.3 (default, Sep 27 2018, 17:25:39) 
+[GCC 6.3.0 20170516]>      <root-test3-dbus.py-<module>-line 56>
+<DEBUG> <MainProcess(2990)> <14-May-20 22:14:29>     <Returning GATT and BLE-Advertising interfaces on Path /org/bluez/hci0>      <root-test3-dbus.py-getBLEinterfaces-line 33>
+<DEBUG> <MainProcess(2990)> <14-May-20 22:14:29>     <Got GATT Interface: <DBUS.org.bluez.GattManager1 object at 0x75bad210>>      <root-test3-dbus.py-main-line 49>
+<DEBUG> <MainProcess(2990)> <14-May-20 22:14:29>     <Got BLE Advertising Interface: <DBUS.org.bluez.LEAdvertisingManager1 object at 0x75baded0>>      <root-test3-dbus.py-main-line 51>
+<DEBUG> <MainProcess(3176)> <14-May-20 22:19:02>     <running on python version: 3.5.3 (default, Sep 27 2018, 17:25:39) 
+[GCC 6.3.0 20170516]>      <root-test3-dbus.py-<module>-line 57>
+<DEBUG> <MainProcess(3176)> <14-May-20 22:19:02>     <Returning GATT and BLE-Advertising interfaces on Path /org/bluez/hci0>      <root-test3-dbus.py-getBLEinterfaces-line 33>
+<DEBUG> <MainProcess(3176)> <14-May-20 22:19:02>     <Got GATT Interface: <DBUS.org.bluez.GattManager1 object at 0x75c22ef0>>      <root-test3-dbus.py-main-line 50>
+<DEBUG> <MainProcess(3176)> <14-May-20 22:19:02>     <Got BLE Advertising Interface: <DBUS.org.bluez.LEAdvertisingManager1 object at 0x75c13f30>>      <root-test3-dbus.py-main-line 52>
+<DEBUG> <MainProcess(5868)> <14-May-20 23:07:07>     <running on python version: 3.5.3 (default, Sep 27 2018, 17:25:39) 
+[GCC 6.3.0 20170516]>      <root-test3-dbus.py-<module>-line 58>
+<DEBUG> <MainProcess(5868)> <14-May-20 23:07:07>     <Returning GATT and BLE-Advertising interfaces on Path /org/bluez/hci0>      <root-test3-dbus.py-getBLEinterfaces-line 34>
+<DEBUG> <MainProcess(5868)> <14-May-20 23:07:07>     <Got GATT Interface: <DBUS.org.bluez.GattManager1 object at 0x769a2250>>      <root-test3-dbus.py-main-line 51>
+<DEBUG> <MainProcess(5868)> <14-May-20 23:07:07>     <Got BLE Advertising Interface: <DBUS.org.bluez.LEAdvertisingManager1 object at 0x75bbd770>>      <root-test3-dbus.py-main-line 53>
