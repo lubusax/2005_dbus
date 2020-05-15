@@ -2,7 +2,7 @@ import pydbus
 import json
 import sys
 import logging, logging.config
-
+from gi.repository import GLib
 
 BLUEZ =          'org.bluez'
 DBUS =           'org.freedesktop.DBus.ObjectManager'
@@ -36,7 +36,7 @@ def getBLEinterfaces():
       return (  systemBus,
                 BLEobject[GATT],
                 BLEobject[LE_ADVERTISING]  )
-    logging.debug('Skip Object with Path :', path)
+    logging.debug(('Skip Object with Path :{p}').format(p= path))
   logging.error('No Object Path (Adapter) Found with'+ \
     'BLE Advertisement and GATT Interfaces')
   raise Exception('No BLE Object found with'+ \
@@ -45,6 +45,10 @@ def getBLEinterfaces():
 
 def main():
 
+  loop = GLib.MainLoop()
+
+  
+
   systemBus, AttributesInterface, AdvertisingInterface  = getBLEinterfaces()
 
   logging.debug('Got GATT Interface:'+\
@@ -52,6 +56,9 @@ def main():
   logging.debug('Got BLE Advertising'+\
     ' Interface: {i}'.format(i=AdvertisingInterface))
 
+  loop.run()
+
+  loop.quit()
 
 if __name__ == '__main__':
   logging.config.fileConfig(fname='./data/logging.conf', disable_existing_loggers=False)

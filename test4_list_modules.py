@@ -1,1 +1,3 @@
-print( help('modules'))
+import sys
+print(sys.path)
+#print( help('modules'))
