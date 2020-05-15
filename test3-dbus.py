@@ -53,12 +53,14 @@ def main():
 
   logging.debug('Got GATT Interface:'+\
     ' {i}'.format(i=AttributesInterface))
+  logging.debug('GATT Interface API:'+\
+    ' {h}'.format(h=help(AttributesInterface)))
   logging.debug('Got BLE Advertising'+\
     ' Interface: {i}'.format(i=AdvertisingInterface))
 
-  loop.run()
+  #loop.run()
 
-  loop.quit()
+  #loop.quit()
 
 if __name__ == '__main__':
   logging.config.fileConfig(fname='./data/logging.conf', disable_existing_loggers=False)
