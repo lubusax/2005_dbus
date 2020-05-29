@@ -53,10 +53,27 @@ def main():
 
   logging.debug('Got GATT Interface:'+\
     ' {i}'.format(i=AttributesInterface))
-  logging.debug('GATT Interface API:'+\
-    ' {h}'.format(h=help(AttributesInterface)))
+  # logging.debug('GATT Interface API:'+\
+  #   ' {h}'.format(h=help(AttributesInterface)))
+
   logging.debug('Got BLE Advertising'+\
     ' Interface: {i}'.format(i=AdvertisingInterface))
+  
+  logging.debug('supported includes'+\
+  'LE adv: {i}'.format(i=AdvertisingInterface.SupportedIncludes))
+
+  logging.debug('active instances'+\
+  'LE adv: {i}'.format(i=AdvertisingInterface.ActiveInstances))
+
+  logging.debug('supported instances'+\
+  'LE adv: {i}'.format(i=AdvertisingInterface.SupportedInstances))
+
+  print('how to match the signals using a pattern'+\
+  'on interfaces: {i}'.format(i=help(systemBus.subscribe)))
+
+
+  # logging.debug('BLE Advertising Interface API:'+\
+  #   ' {h}'.format(h=help(AdvertisingInterface)))
 
   #loop.run()
 

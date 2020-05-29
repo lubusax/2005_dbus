@@ -76,3 +76,88 @@
 <DEBUG> <MainProcess(3009)> <28-May-20 01:51:19>     <Got GATT Interface: <DBUS.org.bluez.GattManager1 object at 0x75bc1f70>>      <root-test3-dbus.py-main-line 55>
 <DEBUG> <MainProcess(3009)> <28-May-20 01:51:38>     <GATT Interface API: None>      <root-test3-dbus.py-main-line 57>
 <DEBUG> <MainProcess(3009)> <28-May-20 01:51:38>     <Got BLE Advertising Interface: <DBUS.org.bluez.LEAdvertisingManager1 object at 0x75bd5730>>      <root-test3-dbus.py-main-line 59>
+<DEBUG> <MainProcess(14371)> <28-May-20 22:04:44>     <running on python version: 3.5.3 (default, Sep 27 2018, 17:25:39) 
+[GCC 6.3.0 20170516]>      <root-test3-dbus.py-<module>-line 67>
+<DEBUG> <MainProcess(14371)> <28-May-20 22:04:44>     <Skip Object with Path :/org/bluez>      <root-test3-dbus.py-getBLEinterfaces-line 39>
+<DEBUG> <MainProcess(14371)> <28-May-20 22:04:44>     <Skip Object with Path :/org/bluez/hci0/dev_C0_E4_34_A6_5C_36>      <root-test3-dbus.py-getBLEinterfaces-line 39>
+<DEBUG> <MainProcess(14371)> <28-May-20 22:04:44>     <Skip Object with Path :/org/bluez/hci0/dev_28_16_AD_31_33_F4>      <root-test3-dbus.py-getBLEinterfaces-line 39>
+<DEBUG> <MainProcess(14371)> <28-May-20 22:04:44>     <Returning GATT and BLE-Advertising interfaces on Path /org/bluez/hci0>      <root-test3-dbus.py-getBLEinterfaces-line 34>
+<DEBUG> <MainProcess(14371)> <28-May-20 22:04:44>     <Got GATT Interface: <DBUS.org.bluez.GattManager1 object at 0x75bfdf70>>      <root-test3-dbus.py-main-line 55>
+<DEBUG> <MainProcess(14371)> <28-May-20 22:04:55>     <GATT Interface API: None>      <root-test3-dbus.py-main-line 57>
+<DEBUG> <MainProcess(14371)> <28-May-20 22:04:55>     <Got BLE Advertising Interface: <DBUS.org.bluez.LEAdvertisingManager1 object at 0x75c11730>>      <root-test3-dbus.py-main-line 59>
+<DEBUG> <MainProcess(14412)> <28-May-20 22:05:09>     <running on python version: 3.5.3 (default, Sep 27 2018, 17:25:39) 
+[GCC 6.3.0 20170516]>      <root-test3-dbus.py-<module>-line 67>
+<DEBUG> <MainProcess(14412)> <28-May-20 22:05:09>     <Skip Object with Path :/org/bluez/hci0/dev_C0_E4_34_A6_5C_36>      <root-test3-dbus.py-getBLEinterfaces-line 39>
+<DEBUG> <MainProcess(14412)> <28-May-20 22:05:09>     <Skip Object with Path :/org/bluez>      <root-test3-dbus.py-getBLEinterfaces-line 39>
+<DEBUG> <MainProcess(14412)> <28-May-20 22:05:09>     <Skip Object with Path :/org/bluez/hci0/dev_28_16_AD_31_33_F4>      <root-test3-dbus.py-getBLEinterfaces-line 39>
+<DEBUG> <MainProcess(14412)> <28-May-20 22:05:09>     <Returning GATT and BLE-Advertising interfaces on Path /org/bluez/hci0>      <root-test3-dbus.py-getBLEinterfaces-line 34>
+<DEBUG> <MainProcess(14412)> <28-May-20 22:05:09>     <Got GATT Interface: <DBUS.org.bluez.GattManager1 object at 0x75bdef50>>      <root-test3-dbus.py-main-line 55>
+<DEBUG> <MainProcess(14412)> <28-May-20 22:05:09>     <Got BLE Advertising Interface: <DBUS.org.bluez.LEAdvertisingManager1 object at 0x75bf2710>>      <root-test3-dbus.py-main-line 59>
+<DEBUG> <MainProcess(16523)> <29-May-20 13:15:02>     <running on python version: 3.5.3 (default, Sep 27 2018, 17:25:39) 
+[GCC 6.3.0 20170516]>      <root-test3-dbus.py-<module>-line 67>
+<DEBUG> <MainProcess(16523)> <29-May-20 13:15:02>     <Skip Object with Path :/org/bluez/hci0/dev_28_16_AD_31_33_F4>      <root-test3-dbus.py-getBLEinterfaces-line 39>
+<DEBUG> <MainProcess(16523)> <29-May-20 13:15:02>     <Skip Object with Path :/org/bluez/hci0/dev_C0_E4_34_A6_5C_36>      <root-test3-dbus.py-getBLEinterfaces-line 39>
+<DEBUG> <MainProcess(16523)> <29-May-20 13:15:02>     <Skip Object with Path :/org/bluez>      <root-test3-dbus.py-getBLEinterfaces-line 39>
+<DEBUG> <MainProcess(16523)> <29-May-20 13:15:02>     <Returning GATT and BLE-Advertising interfaces on Path /org/bluez/hci0>      <root-test3-dbus.py-getBLEinterfaces-line 34>
+<DEBUG> <MainProcess(16523)> <29-May-20 13:15:02>     <Got GATT Interface: <DBUS.org.bluez.GattManager1 object at 0x75c69ed0>>      <root-test3-dbus.py-main-line 55>
+<DEBUG> <MainProcess(16523)> <29-May-20 13:16:53>     <GATT Interface API: None>      <root-test3-dbus.py-main-line 57>
+<DEBUG> <MainProcess(16523)> <29-May-20 13:16:53>     <Got BLE Advertising Interface: <DBUS.org.bluez.LEAdvertisingManager1 object at 0x75c7a690>>      <root-test3-dbus.py-main-line 59>
+<DEBUG> <MainProcess(16700)> <29-May-20 13:18:17>     <running on python version: 3.5.3 (default, Sep 27 2018, 17:25:39) 
+[GCC 6.3.0 20170516]>      <root-test3-dbus.py-<module>-line 71>
+<DEBUG> <MainProcess(16700)> <29-May-20 13:18:17>     <Returning GATT and BLE-Advertising interfaces on Path /org/bluez/hci0>      <root-test3-dbus.py-getBLEinterfaces-line 34>
+<DEBUG> <MainProcess(16700)> <29-May-20 13:18:17>     <Got GATT Interface: <DBUS.org.bluez.GattManager1 object at 0x75c54ef0>>      <root-test3-dbus.py-main-line 55>
+<DEBUG> <MainProcess(16700)> <29-May-20 13:18:20>     <GATT Interface API: None>      <root-test3-dbus.py-main-line 57>
+<DEBUG> <MainProcess(16700)> <29-May-20 13:18:20>     <Got BLE Advertising Interface: <DBUS.org.bluez.LEAdvertisingManager1 object at 0x75c656b0>>      <root-test3-dbus.py-main-line 60>
+<DEBUG> <MainProcess(16700)> <29-May-20 13:31:29>     <BLE Advertising Interface API: None>      <root-test3-dbus.py-main-line 63>
+<DEBUG> <MainProcess(17297)> <29-May-20 13:31:32>     <running on python version: 3.5.3 (default, Sep 27 2018, 17:25:39) 
+[GCC 6.3.0 20170516]>      <root-test3-dbus.py-<module>-line 74>
+<DEBUG> <MainProcess(17297)> <29-May-20 13:31:32>     <Skip Object with Path :/org/bluez/hci0/dev_C0_E4_34_A6_5C_36>      <root-test3-dbus.py-getBLEinterfaces-line 39>
+<DEBUG> <MainProcess(17297)> <29-May-20 13:31:32>     <Skip Object with Path :/org/bluez/hci0/dev_28_16_AD_31_33_F4>      <root-test3-dbus.py-getBLEinterfaces-line 39>
+<DEBUG> <MainProcess(17297)> <29-May-20 13:31:32>     <Skip Object with Path :/org/bluez>      <root-test3-dbus.py-getBLEinterfaces-line 39>
+<DEBUG> <MainProcess(17297)> <29-May-20 13:31:32>     <Returning GATT and BLE-Advertising interfaces on Path /org/bluez/hci0>      <root-test3-dbus.py-getBLEinterfaces-line 34>
+<DEBUG> <MainProcess(17297)> <29-May-20 13:31:32>     <Got GATT Interface: <DBUS.org.bluez.GattManager1 object at 0x75b8deb0>>      <root-test3-dbus.py-main-line 55>
+<DEBUG> <MainProcess(17297)> <29-May-20 13:31:32>     <Got BLE Advertising Interface: <DBUS.org.bluez.LEAdvertisingManager1 object at 0x75b9e670>>      <root-test3-dbus.py-main-line 60>
+<DEBUG> <MainProcess(17297)> <29-May-20 13:31:32>     <supported includesLE adv: ['tx-power', 'appearance', 'local-name']>      <root-test3-dbus.py-main-line 63>
+<DEBUG> <MainProcess(17464)> <29-May-20 13:33:57>     <running on python version: 3.5.3 (default, Sep 27 2018, 17:25:39) 
+[GCC 6.3.0 20170516]>      <root-test3-dbus.py-<module>-line 82>
+<DEBUG> <MainProcess(17464)> <29-May-20 13:33:57>     <Skip Object with Path :/org/bluez/hci0/dev_28_16_AD_31_33_F4>      <root-test3-dbus.py-getBLEinterfaces-line 39>
+<DEBUG> <MainProcess(17464)> <29-May-20 13:33:57>     <Skip Object with Path :/org/bluez/hci0/dev_C0_E4_34_A6_5C_36>      <root-test3-dbus.py-getBLEinterfaces-line 39>
+<DEBUG> <MainProcess(17464)> <29-May-20 13:33:57>     <Skip Object with Path :/org/bluez>      <root-test3-dbus.py-getBLEinterfaces-line 39>
+<DEBUG> <MainProcess(17464)> <29-May-20 13:33:57>     <Returning GATT and BLE-Advertising interfaces on Path /org/bluez/hci0>      <root-test3-dbus.py-getBLEinterfaces-line 34>
+<DEBUG> <MainProcess(17464)> <29-May-20 13:33:57>     <Got GATT Interface: <DBUS.org.bluez.GattManager1 object at 0x75c28eb0>>      <root-test3-dbus.py-main-line 55>
+<DEBUG> <MainProcess(17464)> <29-May-20 13:33:57>     <Got BLE Advertising Interface: <DBUS.org.bluez.LEAdvertisingManager1 object at 0x75c39670>>      <root-test3-dbus.py-main-line 60>
+<DEBUG> <MainProcess(17464)> <29-May-20 13:33:57>     <supported includesLE adv: ['tx-power', 'appearance', 'local-name']>      <root-test3-dbus.py-main-line 63>
+<DEBUG> <MainProcess(17464)> <29-May-20 13:33:57>     <active instancesLE adv: 0>      <root-test3-dbus.py-main-line 66>
+<DEBUG> <MainProcess(17464)> <29-May-20 13:33:57>     <supported instancesLE adv: 5>      <root-test3-dbus.py-main-line 69>
+<DEBUG> <MainProcess(18187)> <29-May-20 14:00:27>     <running on python version: 3.5.3 (default, Sep 27 2018, 17:25:39) 
+[GCC 6.3.0 20170516]>      <root-test3-dbus.py-<module>-line 82>
+<DEBUG> <MainProcess(18187)> <29-May-20 14:00:27>     <Skip Object with Path :/org/bluez/hci0/dev_28_16_AD_31_33_F4>      <root-test3-dbus.py-getBLEinterfaces-line 39>
+<DEBUG> <MainProcess(18187)> <29-May-20 14:00:27>     <Returning GATT and BLE-Advertising interfaces on Path /org/bluez/hci0>      <root-test3-dbus.py-getBLEinterfaces-line 34>
+<DEBUG> <MainProcess(18187)> <29-May-20 14:00:27>     <Got GATT Interface: <DBUS.org.bluez.GattManager1 object at 0x75bf9eb0>>      <root-test3-dbus.py-main-line 55>
+<DEBUG> <MainProcess(18187)> <29-May-20 14:00:27>     <Got BLE Advertising Interface: <DBUS.org.bluez.LEAdvertisingManager1 object at 0x75c0a670>>      <root-test3-dbus.py-main-line 60>
+<DEBUG> <MainProcess(18187)> <29-May-20 14:00:27>     <supported includesLE adv: ['tx-power', 'appearance', 'local-name']>      <root-test3-dbus.py-main-line 63>
+<DEBUG> <MainProcess(18187)> <29-May-20 14:00:27>     <active instancesLE adv: 0>      <root-test3-dbus.py-main-line 66>
+<DEBUG> <MainProcess(18187)> <29-May-20 14:00:27>     <supported instancesLE adv: 5>      <root-test3-dbus.py-main-line 69>
+<DEBUG> <MainProcess(18336)> <29-May-20 14:00:40>     <running on python version: 3.5.3 (default, Sep 27 2018, 17:25:39) 
+[GCC 6.3.0 20170516]>      <root-test3-dbus.py-<module>-line 84>
+<DEBUG> <MainProcess(18336)> <29-May-20 14:00:40>     <Skip Object with Path :/org/bluez/hci0/dev_28_16_AD_31_33_F4>      <root-test3-dbus.py-getBLEinterfaces-line 39>
+<DEBUG> <MainProcess(18336)> <29-May-20 14:00:40>     <Skip Object with Path :/org/bluez>      <root-test3-dbus.py-getBLEinterfaces-line 39>
+<DEBUG> <MainProcess(18336)> <29-May-20 14:00:40>     <Returning GATT and BLE-Advertising interfaces on Path /org/bluez/hci0>      <root-test3-dbus.py-getBLEinterfaces-line 34>
+<DEBUG> <MainProcess(18336)> <29-May-20 14:00:40>     <Got GATT Interface: <DBUS.org.bluez.GattManager1 object at 0x75ba0670>>      <root-test3-dbus.py-main-line 55>
+<DEBUG> <MainProcess(18336)> <29-May-20 14:00:40>     <Got BLE Advertising Interface: <DBUS.org.bluez.LEAdvertisingManager1 object at 0x75ba0650>>      <root-test3-dbus.py-main-line 60>
+<DEBUG> <MainProcess(18336)> <29-May-20 14:00:40>     <supported includesLE adv: ['tx-power', 'appearance', 'local-name']>      <root-test3-dbus.py-main-line 63>
+<DEBUG> <MainProcess(18336)> <29-May-20 14:00:40>     <active instancesLE adv: 0>      <root-test3-dbus.py-main-line 66>
+<DEBUG> <MainProcess(18336)> <29-May-20 14:00:40>     <supported instancesLE adv: 5>      <root-test3-dbus.py-main-line 69>
+<DEBUG> <MainProcess(24623)> <29-May-20 16:53:11>     <running on python version: 3.5.3 (default, Sep 27 2018, 17:25:39) 
+[GCC 6.3.0 20170516]>      <root-test3-dbus.py-<module>-line 84>
+<DEBUG> <MainProcess(24900)> <29-May-20 16:58:12>     <running on python version: 3.5.3 (default, Sep 27 2018, 17:25:39) 
+[GCC 6.3.0 20170516]>      <root-test3-dbus.py-<module>-line 84>
+<DEBUG> <MainProcess(24900)> <29-May-20 16:58:12>     <Skip Object with Path :/org/bluez>      <root-test3-dbus.py-getBLEinterfaces-line 39>
+<DEBUG> <MainProcess(24900)> <29-May-20 16:58:12>     <Skip Object with Path :/org/bluez/hci0/dev_28_16_AD_31_33_F4>      <root-test3-dbus.py-getBLEinterfaces-line 39>
+<DEBUG> <MainProcess(24900)> <29-May-20 16:58:12>     <Skip Object with Path :/org/bluez/hci0/dev_C0_E4_34_A6_5C_36>      <root-test3-dbus.py-getBLEinterfaces-line 39>
+<DEBUG> <MainProcess(24900)> <29-May-20 16:58:12>     <Returning GATT and BLE-Advertising interfaces on Path /org/bluez/hci0>      <root-test3-dbus.py-getBLEinterfaces-line 34>
+<DEBUG> <MainProcess(24900)> <29-May-20 16:58:12>     <Got GATT Interface: <DBUS.org.bluez.GattManager1 object at 0x75bb1710>>      <root-test3-dbus.py-main-line 55>
+<DEBUG> <MainProcess(24900)> <29-May-20 16:58:12>     <Got BLE Advertising Interface: <DBUS.org.bluez.LEAdvertisingManager1 object at 0x75bb16f0>>      <root-test3-dbus.py-main-line 60>
+<DEBUG> <MainProcess(24900)> <29-May-20 16:58:12>     <supported includesLE adv: ['tx-power', 'appearance', 'local-name']>      <root-test3-dbus.py-main-line 63>
+<DEBUG> <MainProcess(24900)> <29-May-20 16:58:12>     <active instancesLE adv: 0>      <root-test3-dbus.py-main-line 66>
+<DEBUG> <MainProcess(24900)> <29-May-20 16:58:12>     <supported instancesLE adv: 5>      <root-test3-dbus.py-main-line 69>
