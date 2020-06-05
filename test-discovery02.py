@@ -172,13 +172,13 @@ if __name__ == '__main__':
 
 	scan_filter = dict()
 
-	if options.uuids:
-		uuids = []
-		uuid_list = options.uuids.split(',')
-		for uuid in uuid_list:
-			uuids.append(uuid)
+	#if options.uuids:
+	uuids = []
+	#	uuid_list = options.uuids.split(',')
+	#	for uuid in uuid_list:
+	uuids.append("FFFF")
 
-		scan_filter.update({ "UUIDs": uuids })
+	scan_filter.update({ "UUIDs": uuids })
 
 	if options.rssi:
 		scan_filter.update({ "RSSI": dbus.Int16(options.rssi) })
