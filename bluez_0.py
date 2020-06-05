@@ -4,6 +4,11 @@
 from pydbus import SystemBus
 import sys
 import pprint
+import logging, logging.config
+from pprint import pformat
+
+logging.config.fileConfig(fname='./data/bluez_0.conf', disable_existing_loggers=False)
+logging.debug(('running on python version: {v}').format(v= sys.version))
 
 bus = SystemBus()
 
@@ -15,7 +20,7 @@ bluezInterface = bluezProxy['org.freedesktop.DBus.ObjectManager']
 
 bluezObjects = bluezInterface.GetManagedObjects()
 
-# pprint.pprint(bluezObjects)
+logging.debug(pformat(bluezObjects))
 
 bluezAdapter              = bus.get('org.bluez','/org/bluez/hci0')['org.bluez.Adapter1']
 bluezGattManager          = bus.get('org.bluez','/org/bluez/hci0')['org.bluez.GattManager1']
@@ -107,4 +112,3 @@ pprint.pprint(bluezLEAdvertisingManager.SupportedIncludes)
         |  Unregister(self, uuid:s)          '''
 
 # print(help(bluezNetworkServer))
-
