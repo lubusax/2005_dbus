@@ -2,7 +2,6 @@
 
 from __future__ import absolute_import, print_function, unicode_literals
 
-from optparse import OptionParser, make_option
 import dbus
 import dbus.mainloop.glib
 try:
@@ -13,32 +12,9 @@ import bluezutils
 import pprint
 from pprint import pformat
 
-compact = False
-devices = {}
+nameThingsGate = "ThingsGate"
 
-def print_compact(address, properties):
-	name = ""
-	address = "<unknown>"
-
-	for key, value in properties.items():
-		if type(value) is dbus.String:
-			value = unicode(value).encode('ascii', 'replace')
-		if (key == "Name"):
-			name = value
-		elif (key == "Address"):
-			address = value
-
-	if "Logged" in properties:
-		flag = "*"
-	else:
-		flag = " "
-
-	print("%s%s %s" % (flag, address, name))
-
-	properties["Logged"] = True
-
-def print_normal(address, properties):
-	print("[ " + address + " ]")
+def print_normal(properties):
 
 	for key in properties.keys():
 		value = properties[key]
@@ -51,40 +27,17 @@ def print_normal(address, properties):
 
 	print()
 
-	properties["Logged"] = True
-
-def skip_dev(old_dev, new_dev):
-	if not "Logged" in old_dev:
-		return False
-	if "Name" in old_dev:
-		return True
-	if not "Name" in new_dev:
-		return True
-	return False
-
 def interfaces_added(path, interfaces):
 	properties = interfaces["org.bluez.Device1"]
 	if not properties:
 		return
 
-	if path in devices:
-		dev = devices[path]
+	if "Name" in properties:
+		print("Name",properties["Name"])
+		if properties["Name"]==nameThingsGate:
+			print("we found it!")
 
-		if compact and skip_dev(dev, properties):
-			return
-		devices[path] = dict(devices[path].items() + properties.items())
-	else:
-		devices[path] = properties
-
-	if "Address" in devices[path]:
-		address = properties["Address"]
-	else:
-		address = "<unknown>"
-
-	if compact:
-		print_compact(address, devices[path])
-	else:
-		print_normal(address, devices[path])
+	print_normal(properties)
 
 def properties_changed(interface, changed, invalidated, path):
 	print('properties changed '+'#'*120+ '\n')
@@ -126,32 +79,7 @@ if __name__ == '__main__':
 
 	bus = dbus.SystemBus()
 
-	option_list = [
-			make_option("-i", "--device", action="store",
-					type="string", dest="dev_id"),
-			make_option("-u", "--uuids", action="store",
-					type="string", dest="uuids",
-					help="Filtered service UUIDs [uuid1,uuid2,...]"),
-			make_option("-r", "--rssi", action="store",
-					type="int", dest="rssi",
-					help="RSSI threshold value"),
-			make_option("-p", "--pathloss", action="store",
-					type="int", dest="pathloss",
-					help="Pathloss threshold value"),
-			make_option("-t", "--transport", action="store",
-					type="string", dest="transport",
-					help="Type of scan to run (le/bredr/auto)"),
-			make_option("-c", "--compact",
-					action="store_true", dest="compact"),
-			]
-	parser = OptionParser(option_list=option_list)
-
-	(options, args) = parser.parse_args()
-
-	adapter = bluezutils.find_adapter(options.dev_id)
-
-	if options.compact:
-		compact = True;
+	adapter = bluezutils.find_adapter()
 
 	bus.add_signal_receiver(interfaces_added,
 			dbus_interface = "org.freedesktop.DBus.ObjectManager",
@@ -172,22 +100,14 @@ if __name__ == '__main__':
 
 	scan_filter = dict()
 
-	#if options.uuids:
-	uuids = []
-	#	uuid_list = options.uuids.split(',')
-	#	for uuid in uuid_list:
-	uuids.append("FFFF")
+	#uuids = []
+	#uuids.append("FFFF")
 
-	scan_filter.update({ "UUIDs": uuids })
+	scan_filter.update({ "UUIDs": ["FFFF"] })
 
-	if options.rssi:
-		scan_filter.update({ "RSSI": dbus.Int16(options.rssi) })
+	scan_filter.update({ "Transport": "le" })
 
-	if options.pathloss:
-		scan_filter.update({ "Pathloss": dbus.UInt16(options.pathloss) })
-
-	if options.transport:
-		scan_filter.update({ "Transport": options.transport })
+	print(pformat(scan_filter))
 
 	adapter.SetDiscoveryFilter(scan_filter)
 
