@@ -59,7 +59,8 @@ bluezNetworkServer        = bus.get('org.bluez','/org/bluez/hci0')['org.bluez.Ne
         |  Powered       (b) readwrite
         |  UUIDs         (as) read   '''
 
-pprint.pprint(bluezAdapter.Address) 
+pprint.pprint(bluezAdapter.Address)
+pprint.pprint(bluezAdapter.Name)
 
 bluezAdapterDiscoveryFilters = bluezAdapter.GetDiscoveryFilters()
 
