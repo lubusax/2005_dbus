@@ -96,16 +96,12 @@ if __name__ == '__main__':
 	objects = om.GetManagedObjects()
 	for path, interfaces in objects.items():
 		if "org.bluez.Device1" in interfaces:
-			devices[path] = interfaces["org.bluez.Device1"]
+			device = interfaces["org.bluez.Device1"]
 
 	scan_filter = dict()
 
-	#uuids = []
-	#uuids.append("FFFF")
-
-	scan_filter.update({ "UUIDs": ["FFFF"] })
-
-	scan_filter.update({ "Transport": "le" })
+	#scan_filter.update({ "UUIDs": ["FFFF"] })
+	#scan_filter.update({ "Transport": "le" })
 
 	print(pformat(scan_filter))
 
