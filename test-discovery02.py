@@ -32,6 +32,7 @@ def interfaces_added(path, interfaces):
 	print('added: ', path)
 	#print(properties)
 	if not properties:
+		print(" ---Warning: NO PROPERTIES")
 		return
 
 	if "Name" in properties:
@@ -39,16 +40,23 @@ def interfaces_added(path, interfaces):
 		if properties["Name"]==nameThingsGate:
 			print("we found it!")
 			#path="/org/bluez/hci0/dev_B8_27_EB_E7_44_E3"
-			ifaceWanted = dbus.Interface(bus.get_object("org.bluez", path),
-                                     "org.bluez.Device1")
-			ifaceWanted.Connect()
+			#ifaceWanted = dbus.Interface(bus.get_object("org.bluez", path),
+      #                               "org.bluez.Device1")
+			#ifaceWanted.Connect()
 			#properties.Connect()
 
 	#print_normal(properties)
 
 def properties_changed(interface, changed, invalidated, path):
 	print('      >> prop. changed : ', path)
-
+	properties = interfaces["org.bluez.Device1"]
+	if not properties:
+		print(" ---Warning: NO PROPERTIES")
+		return	
+	if "Name" in properties:
+		print("  Name: ",properties["Name"])
+		if properties["Name"]==nameThingsGate:
+			print("we found it!")
 
 
 if __name__ == '__main__':
