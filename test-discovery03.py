@@ -100,8 +100,8 @@ if __name__ == '__main__':
 
 	scan_filter = dict()
 
-	#scan_filter.update({ "UUIDs": ["FFFF"] })
-	#scan_filter.update({ "Transport": "le" })
+	scan_filter.update({ "UUIDs": ["FFFF"] })
+	scan_filter.update({ "Transport": "le" })
 
 	print(pformat(scan_filter))
 

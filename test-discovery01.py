@@ -89,37 +89,6 @@ def interfaces_added(path, interfaces):
 def properties_changed(interface, changed, invalidated, path):
 	print('properties changed '+'#'*120+ '\n')
 
-	# if interface != "org.bluez.Device1":
-	# 	return
-
-	# if path in devices:
-	# 	dev = devices[path]
-	# 	if compact and skip_dev(dev, changed):
-	# 		return
-	# 	print ('devices path ', pformat(devices[path]), '§'*90)
-	# 	print('devices path items : ', pformat(devices[path].items()), '§'*90)
-	# 	print('changed items ', pformat(changed.items()), '§'*90, '\n')
-	# 	devices[path] = devices[path].update(changed)
-	# 	#print('devices path items AFTER: ', pformat(devices[path], '§'*90)
-	# else:
-	# 	devices[path] = changed
-
-	# #print ('devices path ', devices[path])
-
-	
-
-	# if devices[path] != None : 
-	# 	if ("Address" in devices[path]):
-	# 		address = devices[path]["Address"]
-	# 	else:
-	# 		address = "<unknown>"
-
-	# 	if compact:
-	# 		print_compact(address, devices[path])
-	# 	else:
-	# 		print_normal(address, devices[path])
-	# else:
-	# 	print ('devices[path] is None')
 
 if __name__ == '__main__':
 	dbus.mainloop.glib.DBusGMainLoop(set_as_default=True)

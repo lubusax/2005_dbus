@@ -29,25 +29,25 @@ def print_normal(properties):
 
 def interfaces_added(path, interfaces):
 	properties = interfaces["org.bluez.Device1"]
-	print(path)
-	print(properties)
+	print('added: ', path)
+	#print(properties)
 	if not properties:
 		return
 
 	if "Name" in properties:
-		print("Name",properties["Name"])
+		print("  Name: ",properties["Name"])
 		if properties["Name"]==nameThingsGate:
 			print("we found it!")
-			path="/org/bluez/hci0/dev_B8_27_EB_E7_44_E3"
+			#path="/org/bluez/hci0/dev_B8_27_EB_E7_44_E3"
 			ifaceWanted = dbus.Interface(bus.get_object("org.bluez", path),
                                      "org.bluez.Device1")
 			ifaceWanted.Connect()
 			#properties.Connect()
 
-	print_normal(properties)
+	#print_normal(properties)
 
 def properties_changed(interface, changed, invalidated, path):
-	print('properties changed '+'#'*120+ '\n')
+	print('      >> prop. changed : ', path)
 
 
 
@@ -57,20 +57,20 @@ if __name__ == '__main__':
 	bus = dbus.SystemBus()
 
 	adapter = bluezutils.find_adapter()
-	path="/org/bluez/hci0/dev_B8_27_EB_E7_44_E3"
-	ifaceWanted = dbus.Interface(bus.get_object("org.bluez", path),
-																"org.bluez.Device1")
-	ifaceWanted.Disconnect()
+	# path="/org/bluez/hci0/dev_B8_27_EB_E7_44_E3"
+	# ifaceWanted = dbus.Interface(bus.get_object("org.bluez", path),
+	# 															"org.bluez.Device1")
+	# ifaceWanted.Connect()
 
 	bus.add_signal_receiver(interfaces_added,
 			dbus_interface = "org.freedesktop.DBus.ObjectManager",
 			signal_name = "InterfacesAdded")
 
-	# bus.add_signal_receiver(properties_changed,
-	# 		dbus_interface = "org.freedesktop.DBus.Properties",
-	# 		signal_name = "PropertiesChanged",
-	# 		arg0 = "org.bluez.Device1",
-	# 		path_keyword = "path")
+	bus.add_signal_receiver(properties_changed,
+			dbus_interface = "org.freedesktop.DBus.Properties",
+			signal_name = "PropertiesChanged",
+			arg0 = "org.bluez.Device1",
+			path_keyword = "path")
 
 	om = dbus.Interface(bus.get_object("org.bluez", "/"),
 				"org.freedesktop.DBus.ObjectManager")
@@ -81,8 +81,8 @@ if __name__ == '__main__':
 
 	scan_filter = dict()
 
-	scan_filter.update({ "UUIDs": ["FFFF"] })
-	scan_filter.update({ "Transport": "le" })
+	#scan_filter.update({ "UUIDs": ["FFFF"] })
+	#scan_filter.update({ "Transport": "le" })
 
 	print(pformat(scan_filter))
 
