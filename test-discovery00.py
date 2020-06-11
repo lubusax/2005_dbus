@@ -10,8 +10,6 @@ try:
 except ImportError:
   import gobject as GObject
 import bluezutils
-import pprint
-from pprint import pformat
 
 compact = False
 devices = {}
@@ -20,7 +18,7 @@ def print_compact(address, properties):
 	name = ""
 	address = "<unknown>"
 
-	for key, value in properties.items():
+	for key, value in properties.iteritems():
 		if type(value) is dbus.String:
 			value = unicode(value).encode('ascii', 'replace')
 		if (key == "Name"):
@@ -43,7 +41,7 @@ def print_normal(address, properties):
 	for key in properties.keys():
 		value = properties[key]
 		if type(value) is dbus.String:
-			value = str(value).encode('ascii', 'replace')
+			value = unicode(value).encode('ascii', 'replace')
 		if (key == "Class"):
 			print("    %s = 0x%06x" % (key, value))
 		else:
@@ -87,8 +85,27 @@ def interfaces_added(path, interfaces):
 		print_normal(address, devices[path])
 
 def properties_changed(interface, changed, invalidated, path):
-	print('properties changed '+'#'*120+ '\n')
+	if interface != "org.bluez.Device1":
+		return
 
+	if path in devices:
+		dev = devices[path]
+
+		if compact and skip_dev(dev, changed):
+			return
+		devices[path] = dict(devices[path].items() + changed.items())
+	else:
+		devices[path] = changed
+
+	if "Address" in devices[path]:
+		address = devices[path]["Address"]
+	else:
+		address = "<unknown>"
+
+	if compact:
+		print_compact(address, devices[path])
+	else:
+		print_normal(address, devices[path])
 
 if __name__ == '__main__':
 	dbus.mainloop.glib.DBusGMainLoop(set_as_default=True)
