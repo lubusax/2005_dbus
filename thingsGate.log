@@ -161,3 +161,14 @@
 <DEBUG> <MainProcess(24900)> <29-May-20 16:58:12>     <supported includesLE adv: ['tx-power', 'appearance', 'local-name']>      <root-test3-dbus.py-main-line 63>
 <DEBUG> <MainProcess(24900)> <29-May-20 16:58:12>     <active instancesLE adv: 0>      <root-test3-dbus.py-main-line 66>
 <DEBUG> <MainProcess(24900)> <29-May-20 16:58:12>     <supported instancesLE adv: 5>      <root-test3-dbus.py-main-line 69>
+<DEBUG> <MainProcess(17008)> <01-Aug-20 08:57:36>     <running on python version: 3.5.3 (default, Sep 27 2018, 17:25:39) 
+[GCC 6.3.0 20170516]>      <root-test3-dbus.py-<module>-line 84>
+<DEBUG> <MainProcess(17008)> <01-Aug-20 08:57:36>     <Skip Object with Path :/org/bluez/hci0/dev_B8_27_EB_4D_68_70>      <root-test3-dbus.py-getBLEinterfaces-line 39>
+<DEBUG> <MainProcess(17008)> <01-Aug-20 08:57:36>     <Skip Object with Path :/org/bluez/hci0/dev_C0_E4_34_A6_5C_36>      <root-test3-dbus.py-getBLEinterfaces-line 39>
+<DEBUG> <MainProcess(17008)> <01-Aug-20 08:57:36>     <Skip Object with Path :/org/bluez/hci0/dev_28_16_AD_31_33_F4>      <root-test3-dbus.py-getBLEinterfaces-line 39>
+<DEBUG> <MainProcess(17008)> <01-Aug-20 08:57:36>     <Returning GATT and BLE-Advertising interfaces on Path /org/bluez/hci0>      <root-test3-dbus.py-getBLEinterfaces-line 34>
+<DEBUG> <MainProcess(17008)> <01-Aug-20 08:57:36>     <Got GATT Interface: <DBUS.org.bluez.GattManager1 object at 0x75c69f30>>      <root-test3-dbus.py-main-line 55>
+<DEBUG> <MainProcess(17008)> <01-Aug-20 08:57:36>     <Got BLE Advertising Interface: <DBUS.org.bluez.LEAdvertisingManager1 object at 0x75c7e150>>      <root-test3-dbus.py-main-line 60>
+<DEBUG> <MainProcess(17008)> <01-Aug-20 08:57:36>     <supported includesLE adv: ['tx-power', 'appearance', 'local-name']>      <root-test3-dbus.py-main-line 63>
+<DEBUG> <MainProcess(17008)> <01-Aug-20 08:57:36>     <active instancesLE adv: 0>      <root-test3-dbus.py-main-line 66>
+<DEBUG> <MainProcess(17008)> <01-Aug-20 08:57:36>     <supported instancesLE adv: 5>      <root-test3-dbus.py-main-line 69>
