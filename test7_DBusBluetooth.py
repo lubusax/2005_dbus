@@ -173,7 +173,7 @@ advBus = sessionBus.get('org.freedesktop.DBus','/org/bluez/example/advertisement
 LEAdvertisingManager1.RegisterAdvertisement('/org/bluez/example/advertisement', {})
 
 
-GattManager1.RegisterApplication('/', {})
+#GattManager1.RegisterApplication('/', {})
 
 
 loop = GLib.MainLoop()
