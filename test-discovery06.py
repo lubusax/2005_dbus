@@ -86,9 +86,12 @@ if __name__ == '__main__':
 #################################
 
 	scan_filter = dict()
+	scan_filter["Transport"] = "le"
+	scan_filter['UUIDs'] = ['5468696e-6773-496e-546f-756368000100']
+	filters = adapter.GetDiscoveryFilters()
+	#print(filters)
 
 	adapter.SetDiscoveryFilter(scan_filter)
-	help(adapter)
 	adapter.StartDiscovery()
 
 	mainloop = GObject.MainLoop()
