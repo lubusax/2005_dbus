@@ -22,6 +22,10 @@ def find_adapter_in_objects(objects, pattern=None):
 		if not pattern or pattern == adapter["Address"] or \
 							path.endswith(pattern):
 			obj = bus.get_object(SERVICE_NAME, path)
+			#print("BLUEZ :", SERVICE_NAME)
+			print("PATH_HCI0 :", path)
+			print("hci0 :", obj)
+
 			return dbus.Interface(obj, ADAPTER_INTERFACE)
 	raise Exception("Bluetooth adapter not found")
 
