@@ -14,6 +14,7 @@ import bluezutils
 compact = True
 device = {}
 
+
 def printInfo(prefix, properties, compact):
 	
 	address = properties.get("Address")
